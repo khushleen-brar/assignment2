@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="register.html" class="active">Register</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="register">
+
+    <h1>User Registration</h1>
+
+    <form id="registerForm" novalidate>
+
+        <label>Username:</label>
+        <input type="text" id="username" required>
+        <span class="error" id="usernameError"></span>
+
+        <label>Email Address:</label>
+        <input type="email" id="email" required>
+        <span class="error" id="emailError"></span>
+
+        <label>Phone Number:</label>
+        <input type="text" id="phone" required>
+        <span class="error" id="phoneError"></span>
+
+        <label>Password:</label>
+        <input type="password" id="password" required>
+        <span class="error" id="passwordError"></span>
+
+        <label>Confirm Password:</label>
+        <input type="password" id="confirmPassword" required>
+        <span class="error" id="confirmPasswordError"></span>
+
+        <label>Gender:</label>
+        <select id="gender" required>
+            <option value="">-- Select --</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+        <span class="error" id="genderError"></span>
+
+        <label>Dietary Preferences:</label>
+        <select id="diet" required>
+            <option value="">-- Select --</option>
+            <option>None</option>
+            <option>Vegan</option>
+            <option>Halal</option>
+            <option>Gluten-Free</option>
+        </select>
+        <span class="error" id="dietError"></span>
+
+        <label>Country/Region:</label>
+        <input type="text" id="country" required>
+        <span class="error" id="countryError"></span>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 Restaurant Finder</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

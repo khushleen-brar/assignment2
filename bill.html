@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimated Bill</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li><a href="bill.html" class="active">Bill</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="bill">
+    <h1>Estimated Bill Calculator</h1>
+
+    <form id="billForm" novalidate>
+
+        <label>Meal Cost ($):</label>
+        <input type="number" id="mealCost" min="1" required>
+        <span class="error" id="mealCostError"></span>
+
+        <label>Tax (%):</label>
+        <input type="number" id="tax" min="0" value="10" required>
+        <span class="error" id="taxError"></span>
+
+        <label>Tip (%):</label>
+        <input type="number" id="tip" min="0" value="5" required>
+        <span class="error" id="tipError"></span>
+
+        <button type="submit">Calculate Bill</button>
+
+    </form>
+
+    <h2 id="billResult"></h2>
+</section>
+
+
+<footer>
+    <p>&copy; 2026 Restaurant Finder</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

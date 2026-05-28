@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="recommend.html">Recommend</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="reservation.html" class="active">Reservation</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="reservation">
+
+    <h1>Make a Reservation</h1>
+
+    <form id="reservationForm" novalidate>
+
+        <label>Full Name:</label>
+        <input type="text" id="resName" required>
+        <span class="error" id="resNameError"></span>
+
+        <label>Email Address:</label>
+        <input type="email" id="resEmail" required>
+        <span class="error" id="resEmailError"></span>
+
+        <label>Phone Number:</label>
+        <input type="text" id="resPhone" required>
+        <span class="error" id="resPhoneError"></span>
+
+        <label>Select Restaurant:</label>
+        <select id="resRestaurant" required>
+            <option value="">-- Select --</option>
+            <option value="20">Spice Garden (Deposit $20)</option>
+            <option value="25">Sakura Sushi Bar (Deposit $25)</option>
+            <option value="20">Bella Italia (Deposit $20)</option>
+            <option value="15">Golden Wok (Deposit $15)</option>
+            <option value="20">El Toro Grill (Deposit $20)</option>
+            <option value="30">Ocean Breeze (Deposit $30)</option>
+        </select>
+        <span class="error" id="resRestaurantError"></span>
+
+        <label>Number of People:</label>
+        <input type="number" id="resPeople" min="1" required>
+        <span class="error" id="resPeopleError"></span>
+
+        <label>Date:</label>
+        <input type="date" id="resDate" required>
+        <span class="error" id="resDateError"></span>
+
+        <label>Time:</label>
+        <input type="time" id="resTime" required>
+        <span class="error" id="resTimeError"></span>
+
+        <label>Deposit Amount:</label>
+        <input type="text" id="resDeposit" readonly>
+
+        <label>Payment Method:</label>
+        <select id="resPayment" required>
+            <option value="">-- Select --</option>
+            <option value="card">Credit Card</option>
+            <option value="cash">Pay at Restaurant</option>
+        </select>
+        <span class="error" id="resPaymentError"></span>
+
+        <div id="cardSection" style="display:none;">
+            <label>Card Number:</label>
+            <input type="text" id="cardNumber">
+            <span class="error" id="cardNumberError"></span>
+
+            <label>Expiry (MM/YY):</label>
+            <input type="text" id="cardExpiry">
+            <span class="error" id="cardExpiryError"></span>
+
+            <label>CVV:</label>
+            <input type="text" id="cardCVV">
+            <span class="error" id="cardCVVError"></span>
+        </div>
+
+        <label>Voucher Code (optional):</label>
+        <input type="text" id="voucher">
+
+        <button type="submit">Confirm Reservation</button>
+
+    </form>
+
+</section>
+
+
+<footer>
+    <p>&copy; 2026 Restaurant Finder</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
